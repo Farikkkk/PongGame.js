@@ -403,3 +403,21 @@ function computerMove() {
   // Ensure the paddle stays within the game bounds
   paddle2.y = Math.max(0, Math.min(gameHeight - paddle2.height, paddle2.y));
 }
+
+function handleTouch(event) {
+  const touch = event.touches[0]; // Get the first touch point
+  const touchX = touch.clientX; // Get the X coordinate of the touch
+  const paddleWidth = paddle1.width;
+
+  // Check if touch event occurred within the left half of the screen
+  if (touchX < gameWidth / 2) {
+    // Move paddle1 to the left
+    paddle1.x = Math.max(0, touchX - paddleWidth / 2);
+  } else {
+    // Move paddle1 to the right
+    paddle1.x = Math.min(gameWidth - paddleWidth, touchX - paddleWidth / 2);
+  }
+}
+
+// Add touch event listeners to the game board
+gameBoard.addEventListener("touchmove", handleTouch);
