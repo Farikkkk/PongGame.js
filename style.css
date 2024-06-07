@@ -1,0 +1,37 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  font-style: italic;
+  background-color: rgb(18, 86, 86);
+}
+
+.game-container {
+  text-align: center;
+}
+
+#gameBoard {
+  border: 3px solid;
+  margin: 20px 0;
+}
+
+.score-text {
+  font-size: 100px;
+}
+
+.reset-btn {
+  font-size: 26px;
+  font-weight: 500;
+  padding: 10px 20px;
+  background-color: aquamarine;
+
+  border: 1px solid;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0px 4px 7px black;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: aqua;
+  transition: all 0.3s ease;
+}
